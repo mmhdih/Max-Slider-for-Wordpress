@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Max Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: max-slider\n"
+
+msgid "Manage sliders"
+msgstr ""
+
+msgid "Display code"
+msgstr ""
+
+msgid "Put this code in the Elementor \"Shortcode\" widget, a Shortcode block or any page."
+msgstr ""
+
+msgid "Slide settings"
+msgstr ""
+
+msgid "Slide link"
+msgstr ""
+
+msgid "(optional)"
+msgstr ""
+
+msgid "Mobile image"
+msgstr ""
+
+msgid "Choose mobile image"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Formats: JPG, PNG, WEBP and animated GIF. Choose the slider(s) this slide is shown in from the \"Sliders (placements)\" box. Set the order in \"Page Attributes → Order\" (lower number = shown first)."
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Slider"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Max Slider: the old Sepanta Slider plugin or [sp_slider] code snippet is still active. Remove it — the plugin already does the same job and keeps all your slides."
+msgstr ""
+
+msgid "Accent color (active dot, arrow hover)"
+msgstr ""
+
+msgid "Sliders"
+msgstr ""
+
+msgid "Slide"
+msgstr ""
+
+msgid "Add slide"
+msgstr ""
+
+msgid "Add new slide"
+msgstr ""
+
+msgid "Edit slide"
+msgstr ""
+
+msgid "All slides"
+msgstr ""
+
+msgid "Slide image (desktop)"
+msgstr ""
+
+msgid "Set slide image"
+msgstr ""
+
+msgid "Remove image"
+msgstr ""
+
+msgid "Use as slide image"
+msgstr ""
+
+msgid "Search slides"
+msgstr ""
+
+msgid "No slides found."
+msgstr ""
+
+msgid "No slides found in Trash."
+msgstr ""
+
+msgid "Sliders (placements)"
+msgstr ""
+
+msgid "Create new slider"
+msgstr ""
+
+msgid "Slider settings"
+msgstr ""
+
+msgid "All sliders"
+msgstr ""
+
+msgid "Search sliders"
+msgstr ""
+
+msgid "No sliders found."
+msgstr ""
+
+msgid "← Back to sliders"
+msgstr ""
+
+#, php-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+msgid "Previous slide"
+msgstr ""
+
+msgid "Next slide"
+msgstr ""
+
+#, php-format
+msgid "Slide %d"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Boxed (same width as the content)"
+msgstr ""
+
+msgid "Full page width"
+msgstr ""
+
+msgid "Wide (1440 px)"
+msgstr ""
+
+msgid "Desktop aspect ratio"
+msgstr ""
+
+msgid "Wide 1600×560 (recommended for a main banner)"
+msgstr ""
+
+msgid "Extra wide 1920×600 (full width)"
+msgstr ""
+
+msgid "16:9 (1600×900)"
+msgstr ""
+
+msgid "Strip 1200×400"
+msgstr ""
+
+msgid "Thin banner 1200×250"
+msgstr ""
+
+msgid "4:3"
+msgstr ""
+
+msgid "Square"
+msgstr ""
+
+msgid "Mobile aspect ratio"
+msgstr ""
+
+msgid "Square 800×800 (recommended)"
+msgstr ""
+
+msgid "Portrait 800×1000"
+msgstr ""
+
+msgid "16:9"
+msgstr ""
+
+msgid "Same as desktop"
+msgstr ""
+
+msgid "Duration of each slide (seconds)"
+msgstr ""
+
+msgid "Autoplay"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Transition effect"
+msgstr ""
+
+msgctxt "transition effect"
+msgid "Slide"
+msgstr ""
+
+msgid "Fade"
+msgstr ""
+
+msgid "Corner radius (px)"
+msgstr ""
+
+msgid "Arrows"
+msgstr ""
+
+msgid "Dots"
+msgstr ""
+
+msgid "Shadow"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Top and bottom spacing (px)"
+msgstr ""
+
+msgid "Max Slider"
+msgstr ""
+
+msgid "Lightweight, dependency-free image sliders for WordPress. Build as many sliders as you need, give every slide a separate mobile image and a link, and place them anywhere with a shortcode (works with Elementor and every page builder). RTL ready."
+msgstr ""
+
+msgid "mmhdih"
+msgstr ""

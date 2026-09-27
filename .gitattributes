@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.mo binary
+docs/ export-ignore
+.github/ export-ignore
+tools/ export-ignore

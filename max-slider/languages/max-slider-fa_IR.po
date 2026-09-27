@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Max Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: max-slider\n"
+
+msgid "Manage sliders"
+msgstr "مدیریت اسلایدرها"
+
+msgid "Display code"
+msgstr "کد نمایش"
+
+msgid "Put this code in the Elementor \"Shortcode\" widget, a Shortcode block or any page."
+msgstr "این کد را در ابزارک «کد کوتاه» المنتور، بلوک «کد کوتاه» یا هر برگه‌ای قرار دهید."
+
+msgid "Slide settings"
+msgstr "تنظیمات اسلاید"
+
+msgid "Slide link"
+msgstr "لینک اسلاید"
+
+msgid "(optional)"
+msgstr "(اختیاری)"
+
+msgid "Mobile image"
+msgstr "تصویر موبایل"
+
+msgid "Choose mobile image"
+msgstr "انتخاب تصویر موبایل"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Formats: JPG, PNG, WEBP and animated GIF. Choose the slider(s) this slide is shown in from the \"Sliders (placements)\" box. Set the order in \"Page Attributes → Order\" (lower number = shown first)."
+msgstr "فرمت‌ها: JPG، PNG، WEBP و GIF متحرک. اسلایدری که این اسلاید در آن نمایش داده شود را از کادر «اسلایدرها (جایگاه‌ها)» انتخاب کنید. ترتیب از «ویژگی‌ها ← ترتیب» (عدد کمتر = جلوتر)."
+
+msgid "Image"
+msgstr "تصویر"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Slider"
+msgstr "اسلایدر"
+
+msgid "Order"
+msgstr "ترتیب"
+
+msgid "Max Slider: the old Sepanta Slider plugin or [sp_slider] code snippet is still active. Remove it — the plugin already does the same job and keeps all your slides."
+msgstr "مکس اسلایدر: افزونه‌ی قدیمی «سپنتا پت – اسلایدرها» یا کد [sp_slider] هنوز فعال است. آن را غیرفعال یا حذف کنید؛ این افزونه همان کار را انجام می‌دهد و همه‌ی اسلایدها حفظ می‌شوند."
+
+msgid "Accent color (active dot, arrow hover)"
+msgstr "رنگ اصلی (نقطه‌ی فعال و فلش‌ها هنگام هاور)"
+
+msgid "Sliders"
+msgstr "اسلایدرها"
+
+msgid "Slide"
+msgstr "اسلاید"
+
+msgid "Add slide"
+msgstr "افزودن اسلاید"
+
+msgid "Add new slide"
+msgstr "افزودن اسلاید جدید"
+
+msgid "Edit slide"
+msgstr "ویرایش اسلاید"
+
+msgid "All slides"
+msgstr "همه اسلایدها"
+
+msgid "Slide image (desktop)"
+msgstr "تصویر اسلاید (دسکتاپ)"
+
+msgid "Set slide image"
+msgstr "انتخاب تصویر اسلاید"
+
+msgid "Remove image"
+msgstr "حذف تصویر"
+
+msgid "Use as slide image"
+msgstr "استفاده به عنوان تصویر اسلاید"
+
+msgid "Search slides"
+msgstr "جستجوی اسلایدها"
+
+msgid "No slides found."
+msgstr "اسلایدی پیدا نشد."
+
+msgid "No slides found in Trash."
+msgstr "اسلایدی در زباله‌دان پیدا نشد."
+
+msgid "Sliders (placements)"
+msgstr "اسلایدرها (جایگاه‌ها)"
+
+msgid "Create new slider"
+msgstr "ساخت اسلایدر جدید"
+
+msgid "Slider settings"
+msgstr "تنظیمات اسلایدر"
+
+msgid "All sliders"
+msgstr "همه اسلایدرها"
+
+msgid "Search sliders"
+msgstr "جستجوی اسلایدرها"
+
+msgid "No sliders found."
+msgstr "اسلایدری پیدا نشد."
+
+msgid "← Back to sliders"
+msgstr "→ بازگشت به اسلایدرها"
+
+#, php-format
+msgid "%1$d of %2$d"
+msgstr "%1$d از %2$d"
+
+msgid "Previous slide"
+msgstr "اسلاید قبلی"
+
+msgid "Next slide"
+msgstr "اسلاید بعدی"
+
+#, php-format
+msgid "Slide %d"
+msgstr "اسلاید %d"
+
+msgid "Show"
+msgstr "نمایش"
+
+msgid "Hide"
+msgstr "مخفی"
+
+msgid "Layout"
+msgstr "چیدمان"
+
+msgid "Boxed (same width as the content)"
+msgstr "داخل کادر (هم‌عرض محتوا)"
+
+msgid "Full page width"
+msgstr "تمام عرض صفحه"
+
+msgid "Wide (1440 px)"
+msgstr "عریض (۱۴۴۰ پیکسل)"
+
+msgid "Desktop aspect ratio"
+msgstr "نسبت ابعاد دسکتاپ"
+
+msgid "Wide 1600×560 (recommended for a main banner)"
+msgstr "پهن ۱۶۰۰×۵۶۰ (پیشنهادی بنر اصلی)"
+
+msgid "Extra wide 1920×600 (full width)"
+msgstr "خیلی پهن ۱۹۲۰×۶۰۰ (تمام عرض)"
+
+msgid "16:9 (1600×900)"
+msgstr "۱۶:۹ (۱۶۰۰×۹۰۰)"
+
+msgid "Strip 1200×400"
+msgstr "نواری ۱۲۰۰×۴۰۰"
+
+msgid "Thin banner 1200×250"
+msgstr "بنر باریک ۱۲۰۰×۲۵۰"
+
+msgid "4:3"
+msgstr "۴:۳"
+
+msgid "Square"
+msgstr "مربع"
+
+msgid "Mobile aspect ratio"
+msgstr "نسبت ابعاد موبایل"
+
+msgid "Square 800×800 (recommended)"
+msgstr "مربع ۸۰۰×۸۰۰ (پیشنهادی)"
+
+msgid "Portrait 800×1000"
+msgstr "عمودی ۸۰۰×۱۰۰۰"
+
+msgid "16:9"
+msgstr "۱۶:۹"
+
+msgid "Same as desktop"
+msgstr "مثل دسکتاپ"
+
+msgid "Duration of each slide (seconds)"
+msgstr "مدت نمایش هر اسلاید (ثانیه)"
+
+msgid "Autoplay"
+msgstr "پخش خودکار"
+
+msgid "On"
+msgstr "فعال"
+
+msgid "Off"
+msgstr "غیرفعال"
+
+msgid "Transition effect"
+msgstr "افکت تغییر"
+
+msgctxt "transition effect"
+msgid "Slide"
+msgstr "لغزش"
+
+msgid "Fade"
+msgstr "محو شدن"
+
+msgid "Corner radius (px)"
+msgstr "گردی گوشه‌ها (پیکسل)"
+
+msgid "Arrows"
+msgstr "فلش‌ها"
+
+msgid "Dots"
+msgstr "نقطه‌ها"
+
+msgid "Shadow"
+msgstr "سایه"
+
+msgid "Yes"
+msgstr "دارد"
+
+msgid "No"
+msgstr "ندارد"
+
+msgid "Top and bottom spacing (px)"
+msgstr "فاصله از بالا و پایین (پیکسل)"
+
+msgid "Max Slider"
+msgstr "مکس اسلایدر"
+
+msgid "Lightweight, dependency-free image sliders for WordPress. Build as many sliders as you need, give every slide a separate mobile image and a link, and place them anywhere with a shortcode (works with Elementor and every page builder). RTL ready."
+msgstr "اسلایدر تصویر سبک و بدون وابستگی برای وردپرس. هر تعداد اسلایدر که بخواهید بسازید، برای هر اسلاید تصویر موبایل جدا و لینک بگذارید و با یک کد کوتاه هر جا نمایش دهید (سازگار با المنتور و همه صفحه‌سازها). پشتیبانی کامل از راست‌چین."
+
+msgid "mmhdih"
+msgstr "mmhdih"

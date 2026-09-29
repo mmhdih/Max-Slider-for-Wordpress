@@ -81,11 +81,12 @@ T=[
 (None,"Max Slider","مکس اسلایدر"),
 (None,"Lightweight, dependency-free image sliders for WordPress. Build as many sliders as you need, give every slide a separate mobile image and a link, and place them anywhere with a shortcode (works with Elementor and every page builder). RTL ready.","اسلایدر تصویر سبک و بدون وابستگی برای وردپرس. هر تعداد اسلایدر که بخواهید بسازید، برای هر اسلاید تصویر موبایل جدا و لینک بگذارید و با یک کد کوتاه هر جا نمایش دهید (سازگار با المنتور و همه صفحه‌سازها). پشتیبانی کامل از راست‌چین."),
 (None,"mmhdih","mmhdih"),
+(None,"Designed by Mahdi Habibi | Tavoos Web","طراحی شده توسط مهدی حبیبی | طاووس وب"),
 ]
 def esc(s): return s.replace('\\','\\\\').replace('"','\\"')
 head='''msgid ""
 msgstr ""
-"Project-Id-Version: Max Slider 1.0.0\\n"
+"Project-Id-Version: Max Slider 1.0.1\\n"
 "Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"
@@ -104,7 +105,7 @@ def entries(tr):
 open(L+'max-slider.pot','w').write(head+'\n'+entries(False))
 open(L+'max-slider-fa_IR.po','w').write(head.replace('"MIME','"Language: fa_IR\\n"\n"Plural-Forms: nplurals=1; plural=0;\\n"\n"MIME')+'\n'+entries(True))
 # mo
-meta='Project-Id-Version: Max Slider 1.0.0\nLanguage: fa_IR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n'
+meta='Project-Id-Version: Max Slider 1.0.1\nLanguage: fa_IR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n'
 pairs={'':meta}
 for c,m,t in T: pairs[(c+'\x04'+m) if c else m]=t
 keys=sorted(pairs,key=lambda k:k.encode())

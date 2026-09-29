@@ -4,7 +4,7 @@ Tags: slider, carousel, banner, rtl, elementor
 Requires at least: 5.8
 Tested up to: 7.2
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,8 @@ Build as many independent sliders as you need, each with its own aspect ratio, s
 * Automatic RTL / LTR support
 * No jQuery on the front end, CSS + JS under 8 KB, script loaded only where a slider is shown
 * Persian (fa_IR) translation included
+
+Designed by Mahdi Habibi | Tavoos Web — https://tavoosweb.ir/
 
 Full guide with screenshots: https://github.com/mmhdih/Max-Slider-for-Wordpress
 
@@ -49,6 +51,9 @@ Check the slug in the shortcode, and make sure the slides are published, have a 
 Max Slider uses the same data and shortcode. Deactivate the old plugin (or remove the snippet) and activate Max Slider; everything keeps working.
 
 == Changelog ==
+
+= 1.0.1 =
+* Added designer credit (Mahdi Habibi | Tavoos Web) on the Plugins screen.
 
 = 1.0.0 =
 * First public release, based on the Sepanta Pet multi-slider.

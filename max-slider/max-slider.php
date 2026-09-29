@@ -3,7 +3,7 @@
  * Plugin Name:       Max Slider
  * Plugin URI:        https://github.com/mmhdih/Max-Slider-for-Wordpress
  * Description:       Lightweight, dependency-free image sliders for WordPress. Build as many sliders as you need, give every slide a separate mobile image and a link, and place them anywhere with a shortcode (works with Elementor and every page builder). RTL ready.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            mmhdih
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MAX_SLIDER_VERSION', '1.0.0' );
+define( 'MAX_SLIDER_VERSION', '1.0.1' );
 define( 'MAX_SLIDER_FILE', __FILE__ );
 define( 'MAX_SLIDER_URL', plugin_dir_url( __FILE__ ) );
 define( 'MAX_SLIDER_DIR', plugin_dir_path( __FILE__ ) );
@@ -41,3 +41,11 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), function( $lin
 	array_unshift( $links, '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Manage sliders', 'max-slider' ) . '</a>' );
 	return $links;
 } );
+
+// Designer credit under the plugin description on the Plugins screen.
+add_filter( 'plugin_row_meta', function( $meta, $file ) {
+	if ( plugin_basename( MAX_SLIDER_FILE ) === $file ) {
+		$meta[] = '<a href="https://tavoosweb.ir/" target="_blank" rel="noopener">' . esc_html__( 'Designed by Mahdi Habibi | Tavoos Web', 'max-slider' ) . '</a>';
+	}
+	return $meta;
+}, 10, 2 );

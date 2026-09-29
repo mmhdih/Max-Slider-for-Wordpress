@@ -178,7 +178,7 @@
 
 ### 👤 نویسنده
 
-ساخته‌شده توسط [**mmhdih**](https://github.com/mmhdih). اگر مشکلی دیدید یا پیشنهادی دارید، در بخش [Issues](https://github.com/mmhdih/Max-Slider-for-Wordpress/issues) مطرح کنید.
+ساخته‌شده توسط [**mmhdih**](https://github.com/mmhdih) — طراحی شده توسط [**مهدی حبیبی | طاووس وب**](https://tavoosweb.ir/). اگر مشکلی دیدید یا پیشنهادی دارید، در بخش [Issues](https://github.com/mmhdih/Max-Slider-for-Wordpress/issues) مطرح کنید.
 
 </div>
 
@@ -263,4 +263,4 @@ Releases are built by GitHub Actions (`.github/workflows/release.yml`): push a t
 
 ### Author & license
 
-Made by [**mmhdih**](https://github.com/mmhdih). Licensed under [GPL-2.0-or-later](LICENSE).
+Made by [**mmhdih**](https://github.com/mmhdih) — designed by [**Mahdi Habibi | Tavoos Web**](https://tavoosweb.ir/). Licensed under [GPL-2.0-or-later](LICENSE).

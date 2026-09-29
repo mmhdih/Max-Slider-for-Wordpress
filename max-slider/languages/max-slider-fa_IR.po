@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Max Slider 1.0.0\n"
+"Project-Id-Version: Max Slider 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\n"
 "Language: fa_IR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -239,3 +239,6 @@ msgstr "اسلایدر تصویر سبک و بدون وابستگی برای و�
 
 msgid "mmhdih"
 msgstr "mmhdih"
+
+msgid "Designed by Mahdi Habibi | Tavoos Web"
+msgstr "طراحی شده توسط مهدی حبیبی | طاووس وب"

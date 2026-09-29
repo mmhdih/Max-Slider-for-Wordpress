@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Max Slider 1.0.0\n"
+"Project-Id-Version: Max Slider 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,4 +236,7 @@ msgid "Lightweight, dependency-free image sliders for WordPress. Build as many s
 msgstr ""
 
 msgid "mmhdih"
+msgstr ""
+
+msgid "Designed by Mahdi Habibi | Tavoos Web"
 msgstr ""

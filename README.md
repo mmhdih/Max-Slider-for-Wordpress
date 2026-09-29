@@ -1,4 +1,4 @@
-<h1 align="center">Max Slider for WordPress</h1>
+<h1 align="center">Tavoos Max Slider</h1>
 
 <p align="center">
   <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest"><img src="https://img.shields.io/github/v/release/mmhdih/Max-Slider-for-Wordpress?label=release" alt="Latest release"></a>
@@ -8,13 +8,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/max-slider.zip"><b>⬇️ دانلود افزونه — Download max-slider.zip</b></a>
+  <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip"><b>⬇️ دانلود افزونه — Download tavoos-max-slider.zip</b></a>
   <br>
   <a href="#فارسی">فارسی</a> · <a href="#english">English</a>
 </p>
 
 <p align="center">
-  <img src="docs/images/05-frontend-desktop.png" alt="Max Slider on the front end" width="760">
+  <img src="docs/images/05-frontend-desktop.png" alt="Tavoos Max Slider on the front end" width="760">
 </p>
 
 ---
@@ -23,7 +23,7 @@
 
 ## فارسی
 
-**مکس اسلایدر** یک افزونه‌ی اسلایدر تصویر سبک و بدون وابستگی (بدون jQuery، بدون کتابخانه‌ی جانبی) برای وردپرس است. هر تعداد اسلایدر که بخواهید برای جاهای مختلف سایت می‌سازید؛ هر اسلایدر ابعاد، سرعت و ظاهر مخصوص خودش را دارد و با یک شورت‌کد در هر برگه، نوشته یا ابزارک المنتور نمایش داده می‌شود.
+**مکس اسلایدر طاووس** (Tavoos Max Slider) یک افزونه‌ی اسلایدر تصویر سبک و بدون وابستگی (بدون jQuery، بدون کتابخانه‌ی جانبی) برای وردپرس است. هر تعداد اسلایدر که بخواهید برای جاهای مختلف سایت می‌سازید؛ هر اسلایدر ابعاد، سرعت و ظاهر مخصوص خودش را دارد و با یک شورت‌کد در هر برگه، نوشته یا ابزارک المنتور نمایش داده می‌شود.
 
 ### ✨ ویژگی‌ها
 
@@ -42,7 +42,7 @@
 
 ### 📦 نصب
 
-1. فایل [**max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/max-slider.zip) را از بخش [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) دانلود کنید (فایل zip را باز نکنید).
+1. فایل [**tavoos-max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip) را از بخش [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) دانلود کنید (فایل zip را باز نکنید).
 2. در پیشخوان وردپرس به **افزونه‌ها ← افزودن ← بارگذاری افزونه** بروید.
 3. فایل zip را انتخاب کنید، روی **هم‌اکنون نصب کن** و بعد **فعال‌سازی** بزنید.
 4. منوی جدید **اسلایدرها** در پیشخوان اضافه می‌شود.
@@ -83,13 +83,13 @@
 شورت‌کد اسلایدر را هر جا که می‌خواهید قرار دهید:
 
 ```text
-[sp_slider id="home"]
+[tavoos_slider id="home"]
 ```
 
 - **المنتور:** ابزارک **کد کوتاه (Shortcode)** را بکشید و کد را داخلش بچسبانید.
 - **ویرایشگر بلوک (گوتنبرگ):** بلوک **کد کوتاه** را اضافه کنید.
 - **ابزارک‌ها:** ابزارک «کد کوتاه» یا «متن».
-- **داخل قالب (PHP):** `<?php echo do_shortcode( '[sp_slider id="home"]' ); ?>`
+- **داخل قالب (PHP):** `<?php echo do_shortcode( '[tavoos_slider id="home"]' ); ?>`
 
 <table>
 <tr>
@@ -102,9 +102,9 @@
 
 | شورت‌کد | توضیح |
 |---|---|
-| `[sp_slider id="نامک"]` | نمایش اسلایدر با نامک مشخص. |
-| `[max_slider id="نامک"]` | دقیقاً مثل بالا (نام دیگر). |
-| `[sp_home_slider]` | نمایش اسلایدری که نامکش `home` است. |
+| `[tavoos_slider id="نامک"]` | نمایش اسلایدر با نامک مشخص. |
+
+سایت‌هایی که از نسخه‌ی قدیمی منتقل شده‌اند، شورت‌کدهای قدیمی `[sp_slider]`، `[sp_home_slider]` و `[max_slider]` را هم دارند تا صفحه‌های قبلی خراب نشوند.
 
 ### ⚙️ تنظیمات هر اسلایدر
 
@@ -132,14 +132,15 @@
 
 برای سرعت بهتر تصاویر را با فرمت **WEBP** و حجم کمتر از ۲۰۰ کیلوبایت آپلود کنید. تصویر به‌صورت `cover` در کادر قرار می‌گیرد، پس متن‌های مهم را از لبه‌ها دور نگه دارید.
 
-### 🔄 مهاجرت از نسخه‌ی قبلی (سپنتا اسلایدر / کد اسنیپت)
+### 🔄 مهاجرت از نسخه‌ی قبلی (مکس اسلایدر ۱.x / سپنتا اسلایدر / کد اسنیپت)
 
-مکس اسلایدر همان نوع نوشته (`sp_slide`)، طبقه‌بندی (`sp_slider`)، فیلدها و شورت‌کد `[sp_slider]` نسخه‌ی قبلی را استفاده می‌کند؛ پس **همه‌ی اسلایدرها و اسلایدهای قبلی بدون تغییر باقی می‌مانند**:
+از نسخه‌ی ۲ نام افزونه «مکس اسلایدر طاووس» و نامک آن `tavoos-max-slider` است و همه‌ی نام‌های داخلی پیشوند یکتا دارند (قانون مخزن وردپرس). **همه‌ی اسلایدرها، اسلایدها و تنظیمات قبلی خودکار منتقل می‌شوند:**
 
-1. افزونه‌ی «سپنتا پت – اسلایدرها» را **غیرفعال** کنید (یا کد اسلایدر را از `functions.php` / افزونه‌ی Code Snippets پاک کنید).
-2. مکس اسلایدر را نصب و فعال کنید. شورت‌کدهای موجود در صفحات همان‌طور کار می‌کنند.
+1. مکس اسلایدر طاووس را نصب و فعال کنید.
+2. افزونه‌ی قدیمی (مکس اسلایدر ۱.x یا «سپنتا پت – اسلایدرها») را **غیرفعال و حذف** کنید، یا کد اسلایدر را از `functions.php` / Code Snippets پاک کنید.
+3. با اولین بارگذاری صفحه، اطلاعات منتقل می‌شود. شورت‌کدهای قدیمی `[sp_slider id="…"]` در صفحات همچنان کار می‌کنند؛ برای صفحه‌های جدید از `[tavoos_slider id="…"]` استفاده کنید.
 
-اگر نسخه‌ی قبلی هنوز فعال باشد، افزونه یک هشدار در پیشخوان نشان می‌دهد.
+تا وقتی نسخه‌ی قدیمی فعال است، انتقال انجام نمی‌شود و یک هشدار در پیشخوان نمایش داده می‌شود.
 
 ### ❓ سوالات متداول
 
@@ -167,13 +168,13 @@
 <details>
 <summary>ظاهر را چطور با CSS تغییر بدهم؟</summary>
 
-کلاس‌های اصلی: `.sp-slider`، `.sp-slide`، `.sp-slider__nav`، `.sp-slider__dots`. هر اسلایدر کلاس‌های `sp-slider--boxed|wide|full` و `sp-slider--slide|fade` دارد. متغیرهای CSS: `--sp-radius`، `--sp-gap`، `--sp-accent`، `--sp-rd` (نسبت دسکتاپ) و `--sp-rm` (نسبت موبایل).
+کلاس‌های اصلی: `.tavoos-slider`، `.tavoos-slide`، `.tavoos-slider__nav`، `.tavoos-slider__dots`. هر اسلایدر کلاس‌های `tavoos-slider--boxed|wide|full` و `tavoos-slider--slide|fade` دارد. متغیرهای CSS: `--tavoos-radius`، `--tavoos-gap`، `--tavoos-accent`، `--tavoos-rd` (نسبت دسکتاپ) و `--tavoos-rm` (نسبت موبایل).
 </details>
 
 <details>
 <summary>بعد از اضافه شدن اسلایدر با AJAX (مثلاً پاپ‌آپ) کار نمی‌کند.</summary>
 
-بعد از اضافه شدن محتوا این تابع را صدا بزنید: `window.maxSliderInit()`
+بعد از اضافه شدن محتوا این تابع را صدا بزنید: `window.tavoosSliderInit()`
 </details>
 
 ### 👤 نویسنده
@@ -186,7 +187,7 @@
 
 ## English
 
-**Max Slider** is a lightweight, dependency-free (no jQuery, no libraries) image slider plugin for WordPress. Build as many independent sliders as you need — each with its own size, speed and style — and place them anywhere with a shortcode (Elementor, Gutenberg, widgets, theme files).
+**Tavoos Max Slider** is a lightweight, dependency-free (no jQuery, no libraries) image slider plugin for WordPress. Build as many independent sliders as you need — each with its own size, speed and style — and place them anywhere with a shortcode (Elementor, Gutenberg, widgets, theme files).
 
 ### Features
 
@@ -205,7 +206,7 @@
 
 ### Installation
 
-1. Download [**max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/max-slider.zip) from [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) (don't unzip it).
+1. Download [**tavoos-max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip) from [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) (don't unzip it).
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip, **Install Now**, then **Activate**.
 3. A new **Sliders** menu appears in the dashboard.
 
@@ -216,10 +217,10 @@
 3. Put the shortcode where you want the slider:
 
 ```text
-[sp_slider id="home"]
+[tavoos_slider id="home"]
 ```
 
-Use the Elementor **Shortcode** widget, the Gutenberg **Shortcode** block, a widget, or `<?php echo do_shortcode( '[sp_slider id="home"]' ); ?>` in a theme file.
+Use the Elementor **Shortcode** widget, the Gutenberg **Shortcode** block, a widget, or `<?php echo do_shortcode( '[tavoos_slider id="home"]' ); ?>` in a theme file.
 
 | Screen | |
 |---|---|
@@ -233,33 +234,35 @@ Use the Elementor **Shortcode** widget, the Gutenberg **Shortcode** block, a wid
 
 | Shortcode | Description |
 |---|---|
-| `[sp_slider id="slug"]` | Show the slider with that slug. |
-| `[max_slider id="slug"]` | Alias of the above. |
-| `[sp_home_slider]` | Show the slider whose slug is `home`. |
+| `[tavoos_slider id="slug"]` | Show the slider with that slug. |
+
+Sites migrated from an older version also keep the old `[sp_slider]`, `[sp_home_slider]` and `[max_slider]` shortcodes, so existing pages don't break.
 
 ### Customizing with CSS
 
-Main classes: `.sp-slider`, `.sp-slide`, `.sp-slider__nav`, `.sp-slider__dots`, plus modifiers `sp-slider--boxed|wide|full` and `sp-slider--slide|fade`. CSS variables: `--sp-radius`, `--sp-gap`, `--sp-accent`, `--sp-rd` (desktop ratio), `--sp-rm` (mobile ratio). If a slider is injected later via AJAX, call `window.maxSliderInit()`.
+Main classes: `.tavoos-slider`, `.tavoos-slide`, `.tavoos-slider__nav`, `.tavoos-slider__dots`, plus modifiers `tavoos-slider--boxed|wide|full` and `tavoos-slider--slide|fade`. CSS variables: `--tavoos-radius`, `--tavoos-gap`, `--tavoos-accent`, `--tavoos-rd` (desktop ratio), `--tavoos-rm` (mobile ratio). If a slider is injected later via AJAX, call `window.tavoosSliderInit()`.
 
-### Upgrading from the "Sepanta Slider" plugin/snippet
+### Upgrading from Max Slider 1.x / Sepanta Slider
 
-Max Slider uses the same post type (`sp_slide`), taxonomy (`sp_slider`), meta keys and `[sp_slider]` shortcode, so existing sliders and slides keep working. Deactivate the old plugin (or remove the snippet) and activate Max Slider.
+Since 2.0 the plugin is called Tavoos Max Slider (slug `tavoos-max-slider`) and every internal name uses a unique prefix, as the WordPress.org guidelines require. Install and activate it, then deactivate and delete the old plugin (or remove the snippet). On the next page load all sliders, slides and settings are moved over automatically, and old `[sp_slider]` shortcodes keep working. Nothing is migrated while the old code is still active; a notice tells you so.
 
 ### Development
 
 ```text
-max-slider/                 ← the plugin (this folder is what gets zipped)
-├── max-slider.php          ← plugin header & bootstrap
+tavoos-max-slider/          ← the plugin (this folder is what gets zipped)
+├── tavoos-max-slider.php   ← plugin header & bootstrap
+├── readme.txt              ← WordPress.org readme
 ├── includes/
 │   ├── settings.php        ← defaults, field definitions, sanitizing
+│   ├── migrate.php         ← one-time upgrade of data from 1.x
 │   ├── post-types.php      ← post type, taxonomy, meta registration
 │   ├── admin.php           ← settings form, meta box, admin columns
 │   └── render.php          ← front-end markup, shortcodes, assets
 ├── assets/css|js/
-└── languages/              ← .pot + Persian translation
+└── languages/              ← .pot + Persian translation (tools/build-translations.py)
 ```
 
-Releases are built by GitHub Actions (`.github/workflows/release.yml`): push a tag such as `v1.0.1`, or run the **Release** workflow manually, and `max-slider.zip` is attached to a new GitHub Release.
+Releases are built by GitHub Actions (`.github/workflows/release.yml`): push a tag such as `v1.0.1`, or run the **Release** workflow manually, and `tavoos-max-slider.zip` is attached to a new GitHub Release.
 
 ### Author & license
 

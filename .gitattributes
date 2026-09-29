@@ -4,3 +4,4 @@
 docs/ export-ignore
 .github/ export-ignore
 tools/ export-ignore
+dist/ export-ignore

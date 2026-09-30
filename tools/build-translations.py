@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-# Builds languages/tavoos-max-slider.pot, tavoos-max-slider-fa_IR.po and .mo from the table below.
+# Builds translations/tavoos-image-carousel-fa_IR.po (and .mo) from the table below,
+# for importing into translate.wordpress.org. The plugin itself ships only the .pot
+# (tavoos-image-carousel/languages/), generated with `wp i18n make-pot`.
 # Usage: python3 tools/build-translations.py
 import struct, os
-L=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'tavoos-max-slider', 'languages') + '/'
+L=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'translations') + '/'
+os.makedirs(L, exist_ok=True)
 T=[
 (None,"Manage sliders","مدیریت اسلایدرها"),
 (None,"Display code","کد نمایش"),
@@ -18,7 +21,7 @@ T=[
 (None,"Title","عنوان"),
 (None,"Slider","اسلایدر"),
 (None,"Order","ترتیب"),
-(None,"Tavoos Max Slider: an older version of this slider (Max Slider 1.x, the Sepanta Slider plugin or its code snippet) is still active. Deactivate or remove it — your slides are moved to Tavoos Max Slider automatically once it is gone.","مکس اسلایدر طاووس: نسخه‌ی قدیمی این اسلایدر (مکس اسلایدر ۱.x، افزونه‌ی «سپنتا پت – اسلایدرها» یا کد آن) هنوز فعال است. آن را غیرفعال یا حذف کنید؛ بعد از آن اسلایدها خودکار به مکس اسلایدر طاووس منتقل می‌شوند."),
+(None,"Tavoos Image Carousel: an older version of this slider (version 1.x of this plugin, the Sepanta Slider plugin or its code snippet) is still active. Deactivate or remove it — your slides are moved to Tavoos Image Carousel automatically once it is gone.","کاروسل تصویر طاووس: نسخه‌ی قدیمی این اسلایدر (نسخه‌ی ۱.x این افزونه، افزونه‌ی «سپنتا پت – اسلایدرها» یا کد آن) هنوز فعال است. آن را غیرفعال یا حذف کنید؛ بعد از آن اسلایدها خودکار به کاروسل تصویر طاووس منتقل می‌شوند."),
 (None,"Accent color (active dot, arrow hover)","رنگ اصلی (نقطه‌ی فعال و فلش‌ها هنگام هاور)"),
 (None,"Sliders","اسلایدرها"),
 (None,"Slide","اسلاید"),
@@ -78,20 +81,23 @@ T=[
 (None,"No","ندارد"),
 (None,"Top and bottom spacing (px)","فاصله از بالا و پایین (پیکسل)"),
 # plugin header
-(None,"Tavoos Max Slider","مکس اسلایدر طاووس"),
+(None,"Tavoos Image Carousel","کاروسل تصویر طاووس"),
+(None,"https://tavoosweb.ir/free-wordpress-plugins/","https://tavoosweb.ir/free-wordpress-plugins/"),
+(None,"Tavoos Image Carousel: another copy of this plugin is already active. Deactivate the older copy, then activate this one again.","کاروسل تصویر طاووس: نسخه‌ی دیگری از این افزونه از قبل فعال است. نسخه‌ی قدیمی را غیرفعال کنید و بعد این افزونه را دوباره فعال کنید."),
 (None,"Lightweight, dependency-free image sliders. Build as many sliders as you need, give every slide a separate mobile image and a link, and place them anywhere with a shortcode (works with Elementor and every page builder). RTL ready.","اسلایدر تصویر سبک و بدون وابستگی. هر تعداد اسلایدر که بخواهید بسازید، برای هر اسلاید تصویر موبایل جدا و لینک بگذارید و با یک کد کوتاه هر جا نمایش دهید (سازگار با المنتور و همه صفحه‌سازها). پشتیبانی کامل از راست‌چین."),
 (None,"mmhdih","mmhdih"),
+(None,"https://github.com/mmhdih","https://github.com/mmhdih"),
 (None,"Designed by Mahdi Habibi | Tavoos Web","طراحی شده توسط مهدی حبیبی | طاووس وب"),
 ]
 def esc(s): return s.replace('\\','\\\\').replace('"','\\"')
 head='''msgid ""
 msgstr ""
-"Project-Id-Version: Tavoos Max Slider 2.0.0\\n"
+"Project-Id-Version: Tavoos Image Carousel 2.1.0\\n"
 "Report-Msgid-Bugs-To: https://github.com/mmhdih/Max-Slider-for-Wordpress/issues\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"
 "Content-Transfer-Encoding: 8bit\\n"
-"X-Domain: tavoos-max-slider\\n"
+"X-Domain: tavoos-image-carousel\\n"
 '''
 def entries(tr):
     out=[]
@@ -102,10 +108,9 @@ def entries(tr):
         e+='msgid "%s"\nmsgstr "%s"\n'%(esc(m),esc(t if tr else ''))
         out.append(e)
     return '\n'.join(out)
-open(L+'tavoos-max-slider.pot','w').write(head+'\n'+entries(False))
-open(L+'tavoos-max-slider-fa_IR.po','w').write(head.replace('"MIME','"Language: fa_IR\\n"\n"Plural-Forms: nplurals=1; plural=0;\\n"\n"MIME')+'\n'+entries(True))
+open(L+'tavoos-image-carousel-fa_IR.po','w').write(head.replace('"MIME','"Language: fa_IR\\n"\n"Plural-Forms: nplurals=1; plural=0;\\n"\n"MIME')+'\n'+entries(True))
 # mo
-meta='Project-Id-Version: Tavoos Max Slider 2.0.0\nLanguage: fa_IR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n'
+meta='Project-Id-Version: Tavoos Image Carousel 2.1.0\nLanguage: fa_IR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n'
 pairs={'':meta}
 for c,m,t in T: pairs[(c+'\x04'+m) if c else m]=t
 keys=sorted(pairs,key=lambda k:k.encode())
@@ -117,5 +122,5 @@ n=len(keys);ko=28;vo=ko+n*8;ds=vo+n*8
 out=struct.pack('<7I',0x950412de,0,n,ko,vo,0,0)
 for a,l,_,_ in off: out+=struct.pack('<2I',l,ds+a)
 for _,_,a,l in off: out+=struct.pack('<2I',l,ds+len(ids)+a)
-open(L+'tavoos-max-slider-fa_IR.mo','wb').write(out+ids+strs)
+open(L+'tavoos-image-carousel-fa_IR.mo','wb').write(out+ids+strs)
 print(n,'entries')

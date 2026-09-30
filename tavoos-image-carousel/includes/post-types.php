@@ -2,7 +2,7 @@
 /**
  * Post type (slides), taxonomy (sliders) and meta registration.
  *
- * @package TavoosMaxSlider
+ * @package TavoosImageCarousel
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,20 +10,20 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'init', function() {
 	register_post_type( 'tavoos_ms_slide', array(
 		'labels'        => array(
-			'name'                  => __( 'Sliders', 'tavoos-max-slider' ),
-			'menu_name'             => __( 'Sliders', 'tavoos-max-slider' ),
-			'singular_name'         => __( 'Slide', 'tavoos-max-slider' ),
-			'add_new'               => __( 'Add slide', 'tavoos-max-slider' ),
-			'add_new_item'          => __( 'Add new slide', 'tavoos-max-slider' ),
-			'edit_item'             => __( 'Edit slide', 'tavoos-max-slider' ),
-			'all_items'             => __( 'All slides', 'tavoos-max-slider' ),
-			'featured_image'        => __( 'Slide image (desktop)', 'tavoos-max-slider' ),
-			'set_featured_image'    => __( 'Set slide image', 'tavoos-max-slider' ),
-			'remove_featured_image' => __( 'Remove image', 'tavoos-max-slider' ),
-			'use_featured_image'    => __( 'Use as slide image', 'tavoos-max-slider' ),
-			'search_items'          => __( 'Search slides', 'tavoos-max-slider' ),
-			'not_found'             => __( 'No slides found.', 'tavoos-max-slider' ),
-			'not_found_in_trash'    => __( 'No slides found in Trash.', 'tavoos-max-slider' ),
+			'name'                  => __( 'Sliders', 'tavoos-image-carousel' ),
+			'menu_name'             => __( 'Sliders', 'tavoos-image-carousel' ),
+			'singular_name'         => __( 'Slide', 'tavoos-image-carousel' ),
+			'add_new'               => __( 'Add slide', 'tavoos-image-carousel' ),
+			'add_new_item'          => __( 'Add new slide', 'tavoos-image-carousel' ),
+			'edit_item'             => __( 'Edit slide', 'tavoos-image-carousel' ),
+			'all_items'             => __( 'All slides', 'tavoos-image-carousel' ),
+			'featured_image'        => __( 'Slide image (desktop)', 'tavoos-image-carousel' ),
+			'set_featured_image'    => __( 'Set slide image', 'tavoos-image-carousel' ),
+			'remove_featured_image' => __( 'Remove image', 'tavoos-image-carousel' ),
+			'use_featured_image'    => __( 'Use as slide image', 'tavoos-image-carousel' ),
+			'search_items'          => __( 'Search slides', 'tavoos-image-carousel' ),
+			'not_found'             => __( 'No slides found.', 'tavoos-image-carousel' ),
+			'not_found_in_trash'    => __( 'No slides found in Trash.', 'tavoos-image-carousel' ),
 		),
 		'public'        => false,
 		'show_ui'       => true,
@@ -36,15 +36,15 @@ add_action( 'init', function() {
 
 	register_taxonomy( 'tavoos_ms_slider', 'tavoos_ms_slide', array(
 		'labels'            => array(
-			'name'          => __( 'Sliders (placements)', 'tavoos-max-slider' ),
-			'menu_name'     => __( 'Manage sliders', 'tavoos-max-slider' ),
-			'singular_name' => __( 'Slider', 'tavoos-max-slider' ),
-			'add_new_item'  => __( 'Create new slider', 'tavoos-max-slider' ),
-			'edit_item'     => __( 'Slider settings', 'tavoos-max-slider' ),
-			'all_items'     => __( 'All sliders', 'tavoos-max-slider' ),
-			'search_items'  => __( 'Search sliders', 'tavoos-max-slider' ),
-			'not_found'     => __( 'No sliders found.', 'tavoos-max-slider' ),
-			'back_to_items' => __( '← Back to sliders', 'tavoos-max-slider' ),
+			'name'          => __( 'Sliders (placements)', 'tavoos-image-carousel' ),
+			'menu_name'     => __( 'Manage sliders', 'tavoos-image-carousel' ),
+			'singular_name' => __( 'Slider', 'tavoos-image-carousel' ),
+			'add_new_item'  => __( 'Create new slider', 'tavoos-image-carousel' ),
+			'edit_item'     => __( 'Slider settings', 'tavoos-image-carousel' ),
+			'all_items'     => __( 'All sliders', 'tavoos-image-carousel' ),
+			'search_items'  => __( 'Search sliders', 'tavoos-image-carousel' ),
+			'not_found'     => __( 'No sliders found.', 'tavoos-image-carousel' ),
+			'back_to_items' => __( '← Back to sliders', 'tavoos-image-carousel' ),
 		),
 		'public'            => false,
 		'show_ui'           => true,

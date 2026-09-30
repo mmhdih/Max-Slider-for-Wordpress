@@ -2,12 +2,12 @@
 /**
  * One-time upgrade from older versions.
  *
- * Max Slider 1.x, the Sepanta Slider plugin and its code snippet stored slides
+ * Version 1.x of this plugin, the Sepanta Slider plugin and its code snippet stored slides
  * as the `sp_slide` post type, sliders as the `sp_slider` taxonomy and settings
  * as `sp_*` meta. This moves that data to the prefixed names used now, so all
  * existing sliders keep working after switching plugins.
  *
- * @package TavoosMaxSlider
+ * @package TavoosImageCarousel
  */
 
 defined( 'ABSPATH' ) || exit;

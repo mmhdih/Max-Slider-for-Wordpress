@@ -2,7 +2,7 @@
 /**
  * Admin screens: slider settings form, slide meta box and list columns.
  *
- * @package TavoosMaxSlider
+ * @package TavoosImageCarousel
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -68,7 +68,7 @@ add_action( 'tavoos_ms_slider_add_form_fields', function() {
 } );
 
 add_action( 'tavoos_ms_slider_edit_form_fields', function( $t ) {
-	echo '<tr class="form-field"><th scope="row">' . esc_html__( 'Display code', 'tavoos-max-slider' ) . '</th><td><code style="font-size:15px;padding:6px 10px;user-select:all">' . esc_html( tavoos_ms_shortcode_for( $t ) ) . '</code><p class="description">' . esc_html__( 'Put this code in the Elementor "Shortcode" widget, a Shortcode block or any page.', 'tavoos-max-slider' ) . '</p></td></tr>';
+	echo '<tr class="form-field"><th scope="row">' . esc_html__( 'Display code', 'tavoos-image-carousel' ) . '</th><td><code style="font-size:15px;padding:6px 10px;user-select:all">' . esc_html( tavoos_ms_shortcode_for( $t ) ) . '</code><p class="description">' . esc_html__( 'Put this code in the Elementor "Shortcode" widget, a Shortcode block or any page.', 'tavoos-image-carousel' ) . '</p></td></tr>';
 	tavoos_ms_print_fields( tavoos_ms_opts( $t->term_id ), 'tr' );
 } );
 
@@ -99,7 +99,7 @@ add_filter( 'manage_edit-tavoos_ms_slider_columns', function( $c ) {
 	foreach ( $c as $k => $v ) {
 		$n[ $k ] = $v;
 		if ( 'name' === $k ) {
-			$n['tavoos_ms_code'] = __( 'Display code', 'tavoos-max-slider' );
+			$n['tavoos_ms_code'] = __( 'Display code', 'tavoos-image-carousel' );
 		}
 	}
 	unset( $n['description'] );
@@ -117,7 +117,7 @@ add_filter( 'manage_tavoos_ms_slider_custom_column', function( $out, $col, $id )
 /* ----- Slide meta box ----- */
 
 add_action( 'add_meta_boxes_tavoos_ms_slide', function() {
-	add_meta_box( 'tavoos_ms_slide_box', __( 'Slide settings', 'tavoos-max-slider' ), 'tavoos_ms_slide_box', 'tavoos_ms_slide', 'normal', 'high' );
+	add_meta_box( 'tavoos_ms_slide_box', __( 'Slide settings', 'tavoos-image-carousel' ), 'tavoos_ms_slide_box', 'tavoos_ms_slide', 'normal', 'high' );
 } );
 
 /**
@@ -132,17 +132,17 @@ function tavoos_ms_slide_box( $post ) {
 	$murl = $mid ? wp_get_attachment_url( $mid ) : '';
 	?>
 	<p>
-		<label for="tavoos_ms_link"><b><?php esc_html_e( 'Slide link', 'tavoos-max-slider' ); ?></b> <?php esc_html_e( '(optional)', 'tavoos-max-slider' ); ?></label><br>
+		<label for="tavoos_ms_link"><b><?php esc_html_e( 'Slide link', 'tavoos-image-carousel' ); ?></b> <?php esc_html_e( '(optional)', 'tavoos-image-carousel' ); ?></label><br>
 		<input type="url" name="tavoos_ms_link" id="tavoos_ms_link" value="<?php echo esc_attr( $link ); ?>" style="width:100%;direction:ltr" placeholder="https://example.com/shop/">
 	</p>
-	<p><b><?php esc_html_e( 'Mobile image', 'tavoos-max-slider' ); ?></b> <?php esc_html_e( '(optional)', 'tavoos-max-slider' ); ?></p>
+	<p><b><?php esc_html_e( 'Mobile image', 'tavoos-image-carousel' ); ?></b> <?php esc_html_e( '(optional)', 'tavoos-image-carousel' ); ?></p>
 	<input type="hidden" name="tavoos_ms_mobile_img" id="tavoos_ms_mobile_img" value="<?php echo esc_attr( $mid ? $mid : '' ); ?>">
 	<div id="tavoos_ms_mobile_prev"><?php if ( $murl ) : ?><img src="<?php echo esc_url( $murl ); ?>" style="max-width:220px;border-radius:8px" alt=""><?php endif; ?></div>
 	<p>
-		<button type="button" class="button" id="tavoos_ms_mobile_btn"><?php esc_html_e( 'Choose mobile image', 'tavoos-max-slider' ); ?></button>
-		<button type="button" class="button" id="tavoos_ms_mobile_del"><?php esc_html_e( 'Remove', 'tavoos-max-slider' ); ?></button>
+		<button type="button" class="button" id="tavoos_ms_mobile_btn"><?php esc_html_e( 'Choose mobile image', 'tavoos-image-carousel' ); ?></button>
+		<button type="button" class="button" id="tavoos_ms_mobile_del"><?php esc_html_e( 'Remove', 'tavoos-image-carousel' ); ?></button>
 	</p>
-	<p style="color:#666"><?php esc_html_e( 'Formats: JPG, PNG, WEBP and animated GIF. Choose the slider(s) this slide is shown in from the "Sliders (placements)" box. Set the order in "Page Attributes → Order" (lower number = shown first).', 'tavoos-max-slider' ); ?></p>
+	<p style="color:#666"><?php esc_html_e( 'Formats: JPG, PNG, WEBP and animated GIF. Choose the slider(s) this slide is shown in from the "Sliders (placements)" box. Set the order in "Page Attributes → Order" (lower number = shown first).', 'tavoos-image-carousel' ); ?></p>
 	<?php
 }
 
@@ -156,9 +156,9 @@ add_action( 'admin_enqueue_scripts', function( $hook ) {
 
 	if ( in_array( $hook, array( 'post.php', 'post-new.php' ), true ) && 'tavoos_ms_slide' === $screen->post_type ) {
 		wp_enqueue_media();
-		wp_enqueue_script( 'tavoos-max-slider-admin', TAVOOS_MS_URL . 'assets/js/admin.js', array( 'jquery' ), TAVOOS_MS_VERSION, true );
-		wp_localize_script( 'tavoos-max-slider-admin', 'tavoosMaxSliderAdmin', array(
-			'title' => __( 'Mobile image', 'tavoos-max-slider' ),
+		wp_enqueue_script( 'tavoos-image-carousel-admin', TAVOOS_MS_URL . 'assets/js/admin.js', array( 'jquery' ), TAVOOS_MS_VERSION, true );
+		wp_localize_script( 'tavoos-image-carousel-admin', 'tavoosImageCarouselAdmin', array(
+			'title' => __( 'Mobile image', 'tavoos-image-carousel' ),
 		) );
 	}
 } );
@@ -179,10 +179,10 @@ add_action( 'save_post_tavoos_ms_slide', function( $id ) {
 add_filter( 'manage_tavoos_ms_slide_posts_columns', function( $c ) {
 	return array(
 		'cb'                        => $c['cb'],
-		'tavoos_ms_img'             => __( 'Image', 'tavoos-max-slider' ),
-		'title'                     => __( 'Title', 'tavoos-max-slider' ),
-		'taxonomy-tavoos_ms_slider' => __( 'Slider', 'tavoos-max-slider' ),
-		'tavoos_ms_order'           => __( 'Order', 'tavoos-max-slider' ),
+		'tavoos_ms_img'             => __( 'Image', 'tavoos-image-carousel' ),
+		'title'                     => __( 'Title', 'tavoos-image-carousel' ),
+		'taxonomy-tavoos_ms_slider' => __( 'Slider', 'tavoos-image-carousel' ),
+		'tavoos_ms_order'           => __( 'Order', 'tavoos-image-carousel' ),
 		'date'                      => $c['date'],
 	);
 } );
@@ -199,9 +199,9 @@ add_action( 'manage_tavoos_ms_slide_posts_custom_column', function( $col, $id ) 
 	}
 }, 10, 2 );
 
-// Warn when an older version (Sepanta Slider, its code snippet or Max Slider 1.x) is still active.
+// Warn when an older version (Sepanta Slider, its code snippet or version 1.x of this plugin) is still active.
 add_action( 'admin_notices', function() {
 	if ( tavoos_ms_legacy_code_active() && current_user_can( 'activate_plugins' ) ) {
-		echo '<div class="notice notice-warning"><p>' . esc_html__( 'Tavoos Max Slider: an older version of this slider (Max Slider 1.x, the Sepanta Slider plugin or its code snippet) is still active. Deactivate or remove it — your slides are moved to Tavoos Max Slider automatically once it is gone.', 'tavoos-max-slider' ) . '</p></div>';
+		echo '<div class="notice notice-warning"><p>' . esc_html__( 'Tavoos Image Carousel: an older version of this slider (version 1.x of this plugin, the Sepanta Slider plugin or its code snippet) is still active. Deactivate or remove it — your slides are moved to Tavoos Image Carousel automatically once it is gone.', 'tavoos-image-carousel' ) . '</p></div>';
 	}
 } );

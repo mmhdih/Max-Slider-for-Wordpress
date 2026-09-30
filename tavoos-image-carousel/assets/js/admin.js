@@ -1,4 +1,4 @@
-/* Tavoos Max Slider — mobile image picker on the slide edit screen. */
+/* Tavoos Image Carousel — mobile image picker on the slide edit screen. */
 jQuery(function ($) {
 	var frame;
 
@@ -6,7 +6,7 @@ jQuery(function ($) {
 		e.preventDefault();
 		if (!frame) {
 			frame = wp.media({
-				title: (window.tavoosMaxSliderAdmin && tavoosMaxSliderAdmin.title) || '',
+				title: (window.tavoosImageCarouselAdmin && tavoosImageCarouselAdmin.title) || '',
 				multiple: false,
 				library: { type: 'image' }
 			});

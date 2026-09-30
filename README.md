@@ -1,4 +1,4 @@
-<h1 align="center">Tavoos Max Slider</h1>
+<h1 align="center">Tavoos Image Carousel</h1>
 
 <p align="center">
   <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest"><img src="https://img.shields.io/github/v/release/mmhdih/Max-Slider-for-Wordpress?label=release" alt="Latest release"></a>
@@ -8,13 +8,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip"><b>⬇️ دانلود افزونه — Download tavoos-max-slider.zip</b></a>
+  <a href="https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-image-carousel.zip"><b>⬇️ دانلود افزونه — Download tavoos-image-carousel.zip</b></a>
   <br>
   <a href="#فارسی">فارسی</a> · <a href="#english">English</a>
 </p>
 
 <p align="center">
-  <img src="docs/images/05-frontend-desktop.png" alt="Tavoos Max Slider on the front end" width="760">
+  <img src="docs/images/05-frontend-desktop.png" alt="Tavoos Image Carousel on the front end" width="760">
 </p>
 
 ---
@@ -23,7 +23,7 @@
 
 ## فارسی
 
-**مکس اسلایدر طاووس** (Tavoos Max Slider) یک افزونه‌ی اسلایدر تصویر سبک و بدون وابستگی (بدون jQuery، بدون کتابخانه‌ی جانبی) برای وردپرس است. هر تعداد اسلایدر که بخواهید برای جاهای مختلف سایت می‌سازید؛ هر اسلایدر ابعاد، سرعت و ظاهر مخصوص خودش را دارد و با یک شورت‌کد در هر برگه، نوشته یا ابزارک المنتور نمایش داده می‌شود.
+**Tavoos Image Carousel** (کاروسل تصویر طاووس) یک افزونه‌ی اسلایدر تصویر سبک و بدون وابستگی (بدون jQuery، بدون کتابخانه‌ی جانبی) برای وردپرس است. هر تعداد اسلایدر که بخواهید برای جاهای مختلف سایت می‌سازید؛ هر اسلایدر ابعاد، سرعت و ظاهر مخصوص خودش را دارد و با یک شورت‌کد در هر برگه، نوشته یا ابزارک المنتور نمایش داده می‌شود.
 
 ### ✨ ویژگی‌ها
 
@@ -38,11 +38,11 @@
 - **راست‌چین و چپ‌چین** به‌صورت خودکار (جهت حرکت و فلش‌ها درست کار می‌کنند).
 - **سریع و سئو-دوست:** اولین تصویر با `fetchpriority="high"` لود می‌شود، اسکریپت فقط در صفحه‌هایی که اسلایدر دارند بارگذاری می‌شود و حجم کل CSS و JS کمتر از ۸ کیلوبایت است.
 - **دسترس‌پذیر:** برچسب‌های ARIA برای اسلایدر، اسلایدها، فلش‌ها و نقطه‌ها.
-- **ترجمه‌ی کامل فارسی**؛ روی سایت‌های فارسی، پنل افزونه خودکار فارسی می‌شود.
+- **آماده‌ی ترجمه**؛ ترجمه‌ها از طریق translate.wordpress.org ارائه می‌شوند.
 
 ### 📦 نصب
 
-1. فایل [**tavoos-max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip) را از بخش [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) دانلود کنید (فایل zip را باز نکنید).
+1. فایل [**tavoos-image-carousel.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-image-carousel.zip) را از بخش [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) دانلود کنید (فایل zip را باز نکنید).
 2. در پیشخوان وردپرس به **افزونه‌ها ← افزودن ← بارگذاری افزونه** بروید.
 3. فایل zip را انتخاب کنید، روی **هم‌اکنون نصب کن** و بعد **فعال‌سازی** بزنید.
 4. منوی جدید **اسلایدرها** در پیشخوان اضافه می‌شود.
@@ -132,15 +132,14 @@
 
 برای سرعت بهتر تصاویر را با فرمت **WEBP** و حجم کمتر از ۲۰۰ کیلوبایت آپلود کنید. تصویر به‌صورت `cover` در کادر قرار می‌گیرد، پس متن‌های مهم را از لبه‌ها دور نگه دارید.
 
-### 🔄 مهاجرت از نسخه‌ی قبلی (مکس اسلایدر ۱.x / سپنتا اسلایدر / کد اسنیپت)
+### 🔄 مهاجرت از نسخه‌های قبلی
 
-از نسخه‌ی ۲ نام افزونه «مکس اسلایدر طاووس» و نامک آن `tavoos-max-slider` است و همه‌ی نام‌های داخلی پیشوند یکتا دارند (قانون مخزن وردپرس). **همه‌ی اسلایدرها، اسلایدها و تنظیمات قبلی خودکار منتقل می‌شوند:**
+نام افزونه برای ثبت در مخزن رسمی وردپرس به **Tavoos Image Carousel** (نامک `tavoos-image-carousel`) تغییر کرده است. **همه‌ی اسلایدرها، اسلایدها و تنظیمات حفظ می‌شوند.**
 
-1. مکس اسلایدر طاووس را نصب و فعال کنید.
-2. افزونه‌ی قدیمی (مکس اسلایدر ۱.x یا «سپنتا پت – اسلایدرها») را **غیرفعال و حذف** کنید، یا کد اسلایدر را از `functions.php` / Code Snippets پاک کنید.
-3. با اولین بارگذاری صفحه، اطلاعات منتقل می‌شود. شورت‌کدهای قدیمی `[sp_slider id="…"]` در صفحات همچنان کار می‌کنند؛ برای صفحه‌های جدید از `[tavoos_slider id="…"]` استفاده کنید.
+- **از Tavoos Max Slider ۲.۰:** Tavoos Image Carousel را نصب کنید، Tavoos Max Slider را **غیرفعال و حذف** کنید و بعد Tavoos Image Carousel را فعال کنید. داده‌ها و شورت‌کد `[tavoos_slider]` تغییری نکرده‌اند. اگر هر دو هم‌زمان فعال باشند، نسخه‌ی جدید کاری انجام نمی‌دهد و در پیشخوان هشدار می‌دهد.
+- **از Max Slider ۱.x، افزونه‌ی «سپنتا پت – اسلایدرها» یا کد اسنیپت:** Tavoos Image Carousel را فعال و نسخه‌ی قدیمی را غیرفعال و حذف کنید (یا کد را از `functions.php` / Code Snippets پاک کنید). با اولین بارگذاری صفحه، اطلاعات خودکار منتقل می‌شود و شورت‌کدهای قدیمی `[sp_slider id="…"]` در صفحات همچنان کار می‌کنند. تا وقتی نسخه‌ی قدیمی فعال است، انتقال انجام نمی‌شود و هشدار نمایش داده می‌شود.
 
-تا وقتی نسخه‌ی قدیمی فعال است، انتقال انجام نمی‌شود و یک هشدار در پیشخوان نمایش داده می‌شود.
+برای صفحه‌های جدید از `[tavoos_slider id="…"]` استفاده کنید.
 
 ### ❓ سوالات متداول
 
@@ -187,7 +186,7 @@
 
 ## English
 
-**Tavoos Max Slider** is a lightweight, dependency-free (no jQuery, no libraries) image slider plugin for WordPress. Build as many independent sliders as you need — each with its own size, speed and style — and place them anywhere with a shortcode (Elementor, Gutenberg, widgets, theme files).
+**Tavoos Image Carousel** is a lightweight, dependency-free (no jQuery, no libraries) image slider plugin for WordPress. Build as many independent sliders as you need — each with its own size, speed and style — and place them anywhere with a shortcode (Elementor, Gutenberg, widgets, theme files).
 
 ### Features
 
@@ -202,11 +201,11 @@
 - **RTL and LTR** detected automatically.
 - **Fast:** first image gets `fetchpriority="high"`, the script only loads on pages that show a slider, CSS + JS < 8 KB.
 - **Accessible** ARIA carousel markup.
-- **Translation ready**, Persian (fa_IR) included.
+- **Translation ready** — translations are delivered through translate.wordpress.org.
 
 ### Installation
 
-1. Download [**tavoos-max-slider.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-max-slider.zip) from [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) (don't unzip it).
+1. Download [**tavoos-image-carousel.zip**](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest/download/tavoos-image-carousel.zip) from [Releases](https://github.com/mmhdih/Max-Slider-for-Wordpress/releases/latest) (don't unzip it).
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip, **Install Now**, then **Activate**.
 3. A new **Sliders** menu appears in the dashboard.
 
@@ -242,15 +241,18 @@ Sites migrated from an older version also keep the old `[sp_slider]`, `[sp_home_
 
 Main classes: `.tavoos-slider`, `.tavoos-slide`, `.tavoos-slider__nav`, `.tavoos-slider__dots`, plus modifiers `tavoos-slider--boxed|wide|full` and `tavoos-slider--slide|fade`. CSS variables: `--tavoos-radius`, `--tavoos-gap`, `--tavoos-accent`, `--tavoos-rd` (desktop ratio), `--tavoos-rm` (mobile ratio). If a slider is injected later via AJAX, call `window.tavoosSliderInit()`.
 
-### Upgrading from Max Slider 1.x / Sepanta Slider
+### Upgrading from earlier versions
 
-Since 2.0 the plugin is called Tavoos Max Slider (slug `tavoos-max-slider`) and every internal name uses a unique prefix, as the WordPress.org guidelines require. Install and activate it, then deactivate and delete the old plugin (or remove the snippet). On the next page load all sliders, slides and settings are moved over automatically, and old `[sp_slider]` shortcodes keep working. Nothing is migrated while the old code is still active; a notice tells you so.
+The plugin was renamed to **Tavoos Image Carousel** (slug `tavoos-image-carousel`) for the WordPress.org directory. Sliders, slides and settings are kept.
+
+- **From Tavoos Max Slider 2.0:** install Tavoos Image Carousel, deactivate and delete Tavoos Max Slider, then activate Tavoos Image Carousel. Data and the `[tavoos_slider]` shortcode are unchanged. While both are active the new copy stays idle and shows a notice.
+- **From Max Slider 1.x or the Sepanta Slider plugin/snippet:** activate Tavoos Image Carousel and deactivate/delete the old plugin (or remove the snippet). On the next page load all data is moved over automatically and old `[sp_slider]` shortcodes keep working. Nothing is migrated while the old code is still active; a notice tells you so.
 
 ### Development
 
 ```text
-tavoos-max-slider/          ← the plugin (this folder is what gets zipped)
-├── tavoos-max-slider.php   ← plugin header & bootstrap
+tavoos-image-carousel/          ← the plugin (this folder is what gets zipped)
+├── tavoos-image-carousel.php   ← plugin header & bootstrap
 ├── readme.txt              ← WordPress.org readme
 ├── includes/
 │   ├── settings.php        ← defaults, field definitions, sanitizing
@@ -259,10 +261,10 @@ tavoos-max-slider/          ← the plugin (this folder is what gets zipped)
 │   ├── admin.php           ← settings form, meta box, admin columns
 │   └── render.php          ← front-end markup, shortcodes, assets
 ├── assets/css|js/
-└── languages/              ← .pot + Persian translation (tools/build-translations.py)
+└── languages/              ← .pot template
 ```
 
-Releases are built by GitHub Actions (`.github/workflows/release.yml`): push a tag such as `v1.0.1`, or run the **Release** workflow manually, and `tavoos-max-slider.zip` is attached to a new GitHub Release.
+Releases are built by GitHub Actions (`.github/workflows/release.yml`): push a tag such as `v2.1.1`, or run the **Release** workflow manually, and `tavoos-image-carousel.zip` is attached to a new GitHub Release.
 
 ### Author & license
 

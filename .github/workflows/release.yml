@@ -1,6 +1,6 @@
 name: Release
 
-# Builds tavoos-max-slider.zip and publishes it as a GitHub Release.
+# Builds tavoos-image-carousel.zip and publishes it as a GitHub Release.
 # Run it by pushing a tag (git tag v1.0.1 && git push origin v1.0.1)
 # or manually from the Actions tab ("Run workflow").
 on:
@@ -20,10 +20,10 @@ jobs:
       - name: Read plugin version
         id: meta
         run: |
-          VERSION=$(sed -n 's/^ \* Version:[[:space:]]*//p' tavoos-max-slider/tavoos-max-slider.php | tr -d '\r')
-          STABLE=$(sed -n 's/^Stable tag:[[:space:]]*//p' tavoos-max-slider/readme.txt | tr -d '\r')
+          VERSION=$(sed -n 's/^ \* Version:[[:space:]]*//p' tavoos-image-carousel/tavoos-image-carousel.php | tr -d '\r')
+          STABLE=$(sed -n 's/^Stable tag:[[:space:]]*//p' tavoos-image-carousel/readme.txt | tr -d '\r')
           if [ "$VERSION" != "$STABLE" ]; then
-            echo "::error::Version in tavoos-max-slider.php ($VERSION) and Stable tag in readme.txt ($STABLE) differ"; exit 1
+            echo "::error::Version in tavoos-image-carousel.php ($VERSION) and Stable tag in readme.txt ($STABLE) differ"; exit 1
           fi
           if [ "${GITHUB_REF_TYPE}" = "tag" ] && [ "${GITHUB_REF_NAME}" != "v$VERSION" ]; then
             echo "::error::Tag ${GITHUB_REF_NAME} does not match plugin version v$VERSION"; exit 1
@@ -31,24 +31,24 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Check PHP syntax
-        run: find tavoos-max-slider -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: find tavoos-image-carousel -name '*.php' -print0 | xargs -0 -n1 php -l
 
       - name: Build zip
         run: |
           mkdir -p dist
-          zip -r -X dist/tavoos-max-slider.zip tavoos-max-slider -x '*.DS_Store'
-          unzip -l dist/tavoos-max-slider.zip
+          zip -r -X dist/tavoos-image-carousel.zip tavoos-image-carousel -x '*.DS_Store'
+          unzip -l dist/tavoos-image-carousel.zip
 
       - name: Release notes
         run: |
           V="${{ steps.meta.outputs.version }}"
           {
-            echo "## Tavoos Max Slider $V"
+            echo "## Tavoos Image Carousel $V"
             echo
-            awk -v v="= $V =" '$0==v && !d{f=1;d=1;next} /^=/{f=0} f' tavoos-max-slider/readme.txt
+            awk -v v="= $V =" '$0==v && !d{f=1;d=1;next} /^=/{f=0} f' tavoos-image-carousel/readme.txt
             echo
             echo "### نصب / Installation"
-            echo "1. فایل **tavoos-max-slider.zip** را دانلود کنید. / Download **tavoos-max-slider.zip** below."
+            echo "1. فایل **tavoos-image-carousel.zip** را دانلود کنید. / Download **tavoos-image-carousel.zip** below."
             echo "2. پیشخوان وردپرس ← افزونه‌ها ← افزودن ← بارگذاری افزونه ← فعال‌سازی. / WordPress → Plugins → Add New → Upload Plugin → Activate."
             echo "3. اسلایدرها ← مدیریت اسلایدرها. / Sliders → Manage sliders."
             echo
@@ -59,8 +59,8 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.meta.outputs.version }}
-          name: Tavoos Max Slider ${{ steps.meta.outputs.version }}
+          name: Tavoos Image Carousel ${{ steps.meta.outputs.version }}
           target_commitish: ${{ github.sha }}
           body_path: dist/notes.md
-          files: dist/tavoos-max-slider.zip
+          files: dist/tavoos-image-carousel.zip
           make_latest: true

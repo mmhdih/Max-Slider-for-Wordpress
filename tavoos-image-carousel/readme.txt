@@ -1,10 +1,10 @@
-=== Tavoos Max Slider ===
+=== Tavoos Image Carousel ===
 Contributors: mmhdih
 Tags: slider, carousel, banner, rtl, image slider
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,11 +23,11 @@ Build as many independent sliders as you need, each with its own aspect ratio, s
 * Touch swipe, keyboard control, pause on hover and when the tab is hidden
 * Automatic RTL / LTR support
 * No jQuery on the front end; CSS + JS under 8 KB, loaded only on pages that show a slider
-* Persian (fa_IR) translation included
+* Translation ready
 
 Designed by Mahdi Habibi | Tavoos Web — https://tavoosweb.ir/
 
-Full guide with screenshots: https://github.com/mmhdih/Max-Slider-for-Wordpress
+Full guide with screenshots: https://tavoosweb.ir/free-wordpress-plugins/
 
 == Installation ==
 
@@ -50,9 +50,9 @@ Main classes: `.tavoos-slider`, `.tavoos-slide`, `.tavoos-slider__nav`, `.tavoos
 
 Call `window.tavoosSliderInit()` after the new content is inserted.
 
-= I used Max Slider 1.x or the Sepanta Slider plugin/snippet before =
+= I used version 1.x of this plugin or the Sepanta Slider plugin/snippet before =
 
-Deactivate the old plugin (or remove the snippet) and activate Tavoos Max Slider. Your sliders, slides and settings are moved over automatically, and the old `[sp_slider]` shortcodes in your pages keep working.
+Deactivate the old plugin (or remove the snippet) and activate Tavoos Image Carousel. Your sliders, slides and settings are moved over automatically, and the old `[sp_slider]` shortcodes in your pages keep working.
 
 == Screenshots ==
 
@@ -65,10 +65,14 @@ Deactivate the old plugin (or remove the snippet) and activate Tavoos Max Slider
 
 == Changelog ==
 
+= 2.1.0 =
+* Renamed to Tavoos Image Carousel (slug and text domain `tavoos-image-carousel`). Sliders, settings and the `[tavoos_slider]` shortcode are unchanged.
+* Translations are now delivered through translate.wordpress.org.
+
 = 2.0.0 =
-* Renamed to Tavoos Max Slider (slug and text domain `tavoos-max-slider`).
+* New unique prefix for all code and data.
 * All code, data and CSS names now use a unique prefix; the shortcode is `[tavoos_slider id="…"]`.
-* Data of Max Slider 1.x / Sepanta Slider is migrated automatically; old shortcodes keep working on migrated sites.
+* Data of version 1.x / Sepanta Slider is migrated automatically; old shortcodes keep working on migrated sites.
 * The stylesheet and script only load on pages that show a slider; the script is deferred.
 * Nonce check when saving slider settings.
 
@@ -80,5 +84,8 @@ Deactivate the old plugin (or remove the snippet) and activate Tavoos Max Slider
 
 == Upgrade Notice ==
 
+= 2.1.0 =
+New plugin name. If an earlier copy is installed in another folder, deactivate it before activating this one; your sliders are kept.
+
 = 2.0.0 =
-New name and prefix. Existing sliders are migrated automatically; deactivate the old Max Slider plugin after installing this one.
+New name and prefix. Existing sliders are migrated automatically; deactivate the old plugin after installing this one.

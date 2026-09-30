@@ -2,7 +2,7 @@
 /**
  * Front-end: assets, slider markup and shortcodes.
  *
- * @package TavoosMaxSlider
+ * @package TavoosImageCarousel
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -15,15 +15,15 @@ defined( 'ABSPATH' ) || exit;
 function tavoos_ms_shortcode_tags() {
 	$tags = array( 'tavoos_slider' );
 	if ( get_option( 'tavoos_ms_legacy_shortcodes' ) ) {
-		// Kept for pages built with Max Slider 1.x / Sepanta Slider.
+		// Kept for pages built with version 1.x of this plugin / Sepanta Slider.
 		$tags = array_merge( $tags, array( 'sp_slider', 'sp_home_slider', 'max_slider' ) );
 	}
 	return $tags;
 }
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_register_style( 'tavoos-max-slider', TAVOOS_MS_URL . 'assets/css/tavoos-max-slider.css', array(), TAVOOS_MS_VERSION );
-	wp_register_script( 'tavoos-max-slider', TAVOOS_MS_URL . 'assets/js/tavoos-max-slider.js', array(), TAVOOS_MS_VERSION, array(
+	wp_register_style( 'tavoos-image-carousel', TAVOOS_MS_URL . 'assets/css/tavoos-image-carousel.css', array(), TAVOOS_MS_VERSION );
+	wp_register_script( 'tavoos-image-carousel', TAVOOS_MS_URL . 'assets/js/tavoos-image-carousel.js', array(), TAVOOS_MS_VERSION, array(
 		'in_footer' => true,
 		'strategy'  => 'defer',
 	) );
@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		$content = $post ? $post->post_content . get_post_meta( $post->ID, '_elementor_data', true ) : '';
 		foreach ( tavoos_ms_shortcode_tags() as $tag ) {
 			if ( false !== strpos( $content, '[' . $tag ) ) {
-				wp_enqueue_style( 'tavoos-max-slider' );
+				wp_enqueue_style( 'tavoos-image-carousel' );
 				break;
 			}
 		}
@@ -80,8 +80,8 @@ function tavoos_ms_render( $slug ) {
 		return '';
 	}
 
-	wp_enqueue_style( 'tavoos-max-slider' );
-	wp_enqueue_script( 'tavoos-max-slider' );
+	wp_enqueue_style( 'tavoos-image-carousel' );
+	wp_enqueue_script( 'tavoos-image-carousel' );
 
 	$count = count( $slides );
 	$rd    = tavoos_ms_sanitize( 'ratio_d', $o['ratio_d'] );
@@ -100,21 +100,21 @@ function tavoos_ms_render( $slug ) {
 		$img  = '<picture>' . ( $m ? '<source media="(max-width:767px)" srcset="' . esc_url( $m ) . '">' : '' ) . '<img src="' . esc_url( $d ) . '" alt="' . esc_attr( get_the_title( $p ) ) . '" ' . ( 0 === $i ? 'fetchpriority="high"' : 'fetchpriority="low"' ) . ' decoding="async"></picture>';
 
 		/* translators: 1: slide number, 2: total number of slides. */
-		$label = sprintf( __( '%1$d of %2$d', 'tavoos-max-slider' ), $i + 1, $count );
+		$label = sprintf( __( '%1$d of %2$d', 'tavoos-image-carousel' ), $i + 1, $count );
 		$h    .= '<div class="tavoos-slide' . ( 0 === $i ? ' is-active' : '' ) . '" role="group" aria-roledescription="slide" aria-label="' . esc_attr( $label ) . '">' . ( $link ? '<a href="' . esc_url( $link ) . '">' . $img . '</a>' : $img ) . '</div>';
 	}
 	$h .= '</div>';
 
 	if ( $count > 1 ) {
 		if ( 'yes' === $o['arrows'] ) {
-			$h .= '<button type="button" class="tavoos-slider__nav tavoos-slider__prev" aria-label="' . esc_attr__( 'Previous slide', 'tavoos-max-slider' ) . '">‹</button>';
-			$h .= '<button type="button" class="tavoos-slider__nav tavoos-slider__next" aria-label="' . esc_attr__( 'Next slide', 'tavoos-max-slider' ) . '">›</button>';
+			$h .= '<button type="button" class="tavoos-slider__nav tavoos-slider__prev" aria-label="' . esc_attr__( 'Previous slide', 'tavoos-image-carousel' ) . '">‹</button>';
+			$h .= '<button type="button" class="tavoos-slider__nav tavoos-slider__next" aria-label="' . esc_attr__( 'Next slide', 'tavoos-image-carousel' ) . '">›</button>';
 		}
 		if ( 'yes' === $o['dots'] ) {
 			$h .= '<div class="tavoos-slider__dots">';
 			foreach ( $slides as $i => $p ) {
 				/* translators: %d: slide number. */
-				$h .= '<button type="button" class="' . ( 0 === $i ? 'is-on' : '' ) . '" aria-label="' . esc_attr( sprintf( __( 'Slide %d', 'tavoos-max-slider' ), $i + 1 ) ) . '"></button>';
+				$h .= '<button type="button" class="' . ( 0 === $i ? 'is-on' : '' ) . '" aria-label="' . esc_attr( sprintf( __( 'Slide %d', 'tavoos-image-carousel' ), $i + 1 ) ) . '"></button>';
 			}
 			$h .= '</div>';
 		}

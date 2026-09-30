@@ -1,4 +1,4 @@
-/* Tavoos Max Slider — https://github.com/mmhdih/Max-Slider-for-Wordpress */
+/* Tavoos Image Carousel — https://tavoosweb.ir/free-wordpress-plugins/ */
 (function () {
 	'use strict';
 
@@ -69,7 +69,15 @@
 		play();
 	}
 
+	// Scrollbar width, so full-width sliders (100vw) never overflow the page.
+	function setScrollbar() {
+		var w = window.innerWidth - document.documentElement.clientWidth;
+		document.documentElement.style.setProperty('--tavoos-sbw', (w > 0 ? w : 0) + 'px');
+	}
+	window.addEventListener('resize', setScrollbar);
+
 	function initAll() {
+		setScrollbar();
 		document.querySelectorAll('.tavoos-slider').forEach(init);
 	}
 

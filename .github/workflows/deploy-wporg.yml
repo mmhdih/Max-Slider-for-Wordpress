@@ -1,0 +1,38 @@
+name: Deploy to WordPress.org
+
+# Uploads the plugin to the WordPress.org SVN repository (trunk, tags/<version>, assets).
+# Run it from the Actions tab ("Run workflow"), or push a tag like v2.1.1.
+# Needs repository secrets SVN_USERNAME and SVN_PASSWORD.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read plugin version
+        id: meta
+        run: |
+          VERSION=$(sed -n 's/^ \* Version:[[:space:]]*//p' tavoos-image-carousel/tavoos-image-carousel.php | tr -d '\r')
+          STABLE=$(sed -n 's/^Stable tag:[[:space:]]*//p' tavoos-image-carousel/readme.txt | tr -d '\r')
+          if [ "$VERSION" != "$STABLE" ]; then
+            echo "::error::Version ($VERSION) and Stable tag ($STABLE) differ"; exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Install Subversion
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq subversion
+
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@2.3.0
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: tavoos-image-carousel
+          VERSION: ${{ steps.meta.outputs.version }}
+          BUILD_DIR: tavoos-image-carousel
+          ASSETS_DIR: .wordpress-org
